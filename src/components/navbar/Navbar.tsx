@@ -20,7 +20,7 @@ function Navbar() {
             			  bg-cyan-900 text-white pl-4'>
             
                 <div className="container flex justify-between text-lg ">
-                <Link to="/home" className="text-white hover:text-cyan-500"> Blog Pessoal</Link>
+                <Link to="/#" className="text-white hover:text-cyan-500"> Blog Pessoal</Link>
                     
 
                     <div className='flex gap-8 pr-4'>
