@@ -20,15 +20,15 @@ function Navbar() {
             			  bg-cyan-900 text-white pl-4'>
             
                 <div className="container flex justify-between text-lg ">
-                <Link to="/#" className="text-white hover:text-cyan-500"> Blog Pessoal</Link>
+                <Link to="/#" className="text-white hover:text-cyan-500"> Blog Pessoal Fern 🌱</Link>
                     
 
                     <div className='flex gap-8 pr-4'>
                         <p>Postagens</p>
                         <Link to='/temas' className='hover:text-cyan-500'>Temas</Link>
-                        <p>Cadastrar Tema</p>
+                        <Link to='/cadastrartema' className='hover:text-cyan-500'>Cadastrar tema</Link>
                         <p>Perfil</p>
-                        <Link to= '' onClick={logout} className="text-white hover:text-cyan-500 "> Sair → </Link>
+                        <Link to= '' onClick={logout} className="text-white hover:text-cyan-500 "> Sair 🚪</Link>
                     </div>
                 </div>
             </div>
