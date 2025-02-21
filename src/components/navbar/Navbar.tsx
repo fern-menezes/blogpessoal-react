@@ -24,7 +24,7 @@ function Navbar() {
                     
 
                     <div className='flex gap-8 pr-4'>
-                        <p>Postagens</p>
+                        <Link to='/postagens' className='hover:text-cyan-500'>Postagens</Link>
                         <Link to='/temas' className='hover:text-cyan-500'>Temas</Link>
                         <Link to='/cadastrartema' className='hover:text-cyan-500'>Cadastrar tema</Link>
                         <p>Perfil</p>

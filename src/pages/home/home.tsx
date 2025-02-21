@@ -1,6 +1,8 @@
+import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens"
 
 function Home() {
     return (
+        <>
         <div className="flex justify-center bg-cyan-900">
             <div className="container grid grid-cols-2 text-white">
                 
@@ -11,11 +13,14 @@ function Home() {
                         opiniões
                     </p>
                     <div className="flex justify-around gap-4">
-                        <div className="rounded border-white border-solid border-2 py-0.5 px-4 text-white">
-                            Nova Postagem
+                            <div className='rounded text-white 
+                                            border-white border-solid
+                                            border-2 py-1 px-4'
+                                >
+                                Nova Postagem
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 <div className="flex justify-center">
                     <img
@@ -26,7 +31,8 @@ function Home() {
                 </div>
             </div>
         </div>
-
+        <ListaPostagens />
+        </>
     )
 }
  
