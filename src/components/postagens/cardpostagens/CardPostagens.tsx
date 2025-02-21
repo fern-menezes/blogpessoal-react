@@ -31,16 +31,16 @@ function CardPostagem({ postagem }: CardPostagensProps) {
                 </div>
             </div>
             <div className="flex">
-                <Link to='' 
-                    className='w-full text-white bg-cyan-700 
-                    hover:bg-cyan-800 flex items-center justify-center py-2'>
-                    <button>Editar</button>
-                </Link>
-                <Link to='' 
-                    className='text-white bg-red-400 
-                    hover:bg-red-500 w-full flex items-center justify-center'>
-                    <button>Deletar</button>
-                </Link>
+            <Link to={`/editarpostagem/${postagem.id}`}
+	            className='w-full text-slate-100 bg-cyan-600 hover:bg-cyan-800 
+                flex items-center justify-center py-2'>
+	            <button>Editar</button>
+            </Link>
+            <Link to={`/deletarpostagem/${postagem.id}`} 
+	            className='text-white bg-red-400 
+	            hover:bg-red-700 w-full flex items-center justify-center'>
+	            <button>Deletar</button>
+            </Link>
             </div>
         </div>
     )

@@ -1,25 +1,25 @@
 import { useState, useContext, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { AuthContext } from "../../../contexts/AuthContext"
+import Postagem from "../../../models/Postagem"
 import { buscar, deletar } from "../../../services/Service"
 import { RotatingLines } from "react-loader-spinner"
-import Postagem from "../../../models/Postagem"
 
 function DeletarPostagem() {
 
     const navigate = useNavigate()
 
-    const [postagem, setPostagem] = useState<Postagem>({} as Postagem)
     const [isLoading, setIsLoading] = useState<boolean>(false)
-    
-    const { usuario, handleLogout } = useContext(AuthContext)
-    const token = usuario.token
+    const [postagem, setPostagem] = useState<Postagem>({} as Postagem)
 
     const { id } = useParams<{ id: string }>()
 
+    const { usuario, handleLogout } = useContext(AuthContext)
+    const token = usuario.token
+
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/postagem/${id}`, setPostagem, {
+            await buscar(`/postagens/${id}`, setPostagem, {
                 headers: {
                     'Authorization': token
                 }
@@ -54,7 +54,7 @@ function DeletarPostagem() {
                 }
             })
 
-            alert('Postagem deletada com sucesso!')
+            alert('Postagem apagada com sucesso')
 
         } catch (error: any) {
             if (error.toString().includes('403')) {
@@ -75,24 +75,31 @@ function DeletarPostagem() {
     return (
         <div className='container w-1/3 mx-auto'>
             <h1 className='text-4xl text-center my-4'>Deletar Postagem</h1>
+
             <p className='text-center font-semibold mb-4'>
-                Você tem certeza de que deseja apagar a postagem a seguir?</p>
+                Você tem certeza de que deseja apagar a postagem a seguir?
+            </p>
+
             <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
                 <header 
                     className='py-2 px-6 bg-cyan-600 text-white font-bold text-2xl'>
-                    Tema
+                    Postagem
                 </header>
-                <p className='p-8 text-3xl bg-white h-full'>{postagem.titulo}</p>
+                <div className="p-4">
+                    <p className='text-xl h-full'>{postagem.titulo}</p>
+                    <p>{postagem.texto}</p>
+                </div>
                 <div className="flex">
                     <button 
-                        className='text-white bg-red-400 hover:bg-red-600 w-full py-2'
+                        className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'
                         onClick={retornar}>
                         Não
                     </button>
                     <button 
-                        className='w-full text-white bg-cyan-400 
-                                   hover:bg-cyan-600 flex items-center justify-center'
-                                   onClick={deletarPostagem}>
+                        className='w-full text-slate-100 bg-cyan-400 
+                        hover:bg-cyan-600 flex items-center justify-center'
+                        onClick={deletarPostagem}>
+                        
                         {isLoading ?
                             <RotatingLines
                                 strokeColor="white"
@@ -109,4 +116,5 @@ function DeletarPostagem() {
         </div>
     )
 }
+
 export default DeletarPostagem
