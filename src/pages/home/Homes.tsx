@@ -1,7 +1,7 @@
 import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens"
 import ModalPostagem from "../../components/postagens/modalpostagem/ModalPostagem"
 
-function Home() {
+function Homes() {
     return (
         <>
         <div className="flex justify-center bg-cyan-900">
@@ -34,4 +34,4 @@ function Home() {
     )
 }
  
-export default Home;
+export default Homes;

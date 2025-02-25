@@ -14,7 +14,8 @@ import DeletarPostagem from './components/postagens/deletarpostagens/DeletarPost
 import Perfil from './pages/perfil/Perfil'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import Home from './pages/home/Home'
+
+import Homes from './pages/home/Homes'
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
           <div className="min-h-[80vh]">
             <Routes>
               <Route path="/" element={<Login />} />
-              <Route path="/home" element={<Home />} />
+              <Route path="/home" element={<Homes />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/login" element={<Login />} />
               <Route path="/temas" element={<ListaTemas />} />
