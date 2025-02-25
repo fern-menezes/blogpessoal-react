@@ -1,5 +1,5 @@
 ![BlogPessoal](https://github.com/fern-menezes/blogpessoal-react/blob/main/public/Login-blog.png)
-# 📌 Blog Pessoal com React, TypeScript, Vite e Segurança
+# 📌 Blog Pessoal com React, TypeScript e Vite
 
 Este projeto é um blog pessoal desenvolvido com **React**, **TypeScript** e **Vite**. O foco principal é a criação de uma aplicação segura e de fácil manutenção, com deploy automatizado utilizando **Vercel**.
 
