@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
 import Cadastro from './cadastro/Cadastro'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
