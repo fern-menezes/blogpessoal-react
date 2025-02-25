@@ -13,7 +13,8 @@ import ListaPostagens from './components/postagens/listapostagens/ListaPostagens
 import FormPostagem from './components/postagens/formpostagens/FormPostagem'
 import DeletarPostagem from './components/postagens/deletarpostagens/DeletarPostagens'
 import Perfil from './pages/perfil/Perfil'
-
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Footer />
         </BrowserRouter>
         </AuthProvider>
+        <ToastContainer />
     </>
   )
 }
