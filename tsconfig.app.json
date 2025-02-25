@@ -20,7 +20,13 @@
     //"noUnusedLocals": true,
     //"noUnusedParameters": true,
    // "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Base URL e Paths */
+    "baseUrl": ".",
+    "paths": {
+      "react-router-dom": ["node_modules/react-router-dom"]
+    }
   },
   "include": ["src", "tailwind.config.js"]
 }
