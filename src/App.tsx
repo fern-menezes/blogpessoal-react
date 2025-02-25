@@ -3,7 +3,7 @@ import Cadastro from './cadastro/Cadastro'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import Login from './login/Login'
-import Home from '../src/pages/home/Home'
+
 import { AuthProvider } from './contexts/AuthContext'
 import ListaTemas from './components/temas/listatemas/ListaTemas'
 import FormTema from './components/temas/formtemas/FormTema'
@@ -14,6 +14,7 @@ import DeletarPostagem from './components/postagens/deletarpostagens/DeletarPost
 import Perfil from './pages/perfil/Perfil'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import Home from './pages/home/Home'
 
 
 function App() {
