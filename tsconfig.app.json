@@ -25,7 +25,8 @@
     /* Base URL e Paths */
     "baseUrl": ".",
     "paths": {
-      "react-router-dom": ["node_modules/react-router-dom"]
+      "react-router-dom": ["node_modules/react-router-dom"],
+      "./pages/*": ["src/pages/*"]
     }
   },
   "include": ["src", "tailwind.config.js"]
